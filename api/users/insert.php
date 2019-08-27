@@ -5,30 +5,29 @@ header('Content-Type: application/json');
 header('Access-Control-Allow-Methods: POST');
 header('Access-Control-Allow-Headers: Access-Control-Allow-Headers,Content-Type,Access-Control-Allow-Methods, Authorization, X-Requested-With');
 
-include_once '../../models/users.php';
-
-// Get raw posted data
-$data = json_decode(file_get_contents("php://input"));
+include_once '../../models/initialization.php';
 
 $user = new Users();
 
-$user->fullnames = $data->fullnames;
-$user->phone = $data->phone;
-$user->email = $data->email;
-$user->username = $data->username;
-$user->password = $data->password;
+if($_POST['password'] === $_POST['confirm']){
+    $user->fullnames = $_POST['fullnames'];
+    $user->phone     = $_POST['phone'];
+    $user->email     = $_POST['email'];
+    $user->username  = $_POST['username'];
+    $user->password  = $_POST['password'];
 
-//find user by email 
-$usermail = $user->find_user_by_email($user->email);
+    //find user by email 
+    $usermail = $user->find_user_by_email($user->email);
 
-if($usermail){
-    echo json_encode(array('message'=>'User Email in use'));
-    die();
-}
+    if($usermail){
+        echo json_encode(array('message'=>'emailError'));
+        die();
+    }
 
-///create user 
-if($user->create()){
-    echo json_encode(array('message'=>'User Created'));
-}else{
-    echo json_encode(array('message'=>'User Not Created'));
+    ///create user 
+    if($user->create()){
+        echo json_encode(array('message'=>'success'));
+    }else{
+        echo json_encode(array('message'=>'failed'));
+    }
 }
