@@ -60,15 +60,12 @@ class Users {
     {
         $query = "SELECT * FROM ".$this->table_name." WHERE email = :email LIMIT 1";
         $stmt = $this->conn->prepare($query);
-        $stmt->execute(
-            array('email'=>$email)
-        );
+        $stmt->execute(array('email'=>$email));
 
         $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
         return $user;
     }
-
 
     public function create(){
         $query = "INSERT INTO ".$this->table_name."(fullnames, phone, email, username, password)VALUES(:fullnames, :phone, :email, :username, :password)";

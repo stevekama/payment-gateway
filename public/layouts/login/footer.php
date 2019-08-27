@@ -37,6 +37,11 @@ $('#registerForm').submit(function(event){
         $('#messageAlert').html('<div class="alert alert-danger alert-dismissible">Failed To Register user. Please Try again..</div>');
         return false;
       }
+
+      if(data.message == 'errorPass'){
+        $('#messageAlert').html('<div class="alert alert-danger alert-dismissible">Failed To Register user. The password entered do not match. Please check and try again...</div>');
+        return false;
+      }
     }
   });
 });

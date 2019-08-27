@@ -30,4 +30,6 @@ if($_POST['password'] === $_POST['confirm']){
     }else{
         echo json_encode(array('message'=>'failed'));
     }
+}else{
+    echo json_encode(array('message'=>'errorPass'));
 }
