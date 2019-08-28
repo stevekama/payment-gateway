@@ -21,8 +21,8 @@ $url = 'https://sandbox.safaricom.co.ke/mpesa/c2b/v1/registerurl';
 $shortCode = '600136'; // provide the short code obtained from your test credentials
 
 /* This two files are provided in the project. */
-$confirmationUrl = 'confirmation_url.php'; // path to your confirmation url. can be IP address that is publicly accessible or a url
-$validationUrl = 'validation.php'; // path to your validation url. can be IP address that is publicly accessible or a url
+$confirmationUrl = base_url().'api/mpesa_api/confirmation_url.php'; // path to your confirmation url. can be IP address that is publicly accessible or a url
+$validationUrl = base_url().'api/mpesa_api/validation.php'; // path to your validation url. can be IP address that is publicly accessible or a url
 
 $curl = curl_init();
 curl_setopt($curl, CURLOPT_URL, $url);
