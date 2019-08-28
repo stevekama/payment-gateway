@@ -22,10 +22,13 @@
                     data:{action:action},
                     dataType:"json",
                     success:function(data){
-                        console.table(data);
-                        $('#userFullNames').html(data.fullnames);
-                        $('#userName').html(data.username);
-                        $('#userEmailAddress').html(data.email);
+                        if(data.message == 'notLoggedIn'){
+                            window.location.href = base_url + 'index.php';
+                        }else{
+                            $('#userFullNames').html(data.fullnames);
+                            $('#userName').html(data.username);
+                            $('#userEmailAddress').html(data.email);
+                        }
                     }
                 });
             }

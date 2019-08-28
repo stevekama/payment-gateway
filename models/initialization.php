@@ -26,3 +26,9 @@ require_once(LIB_PATH.DS.'mpesa_transactions.php');
 
 // bring in error logs 
 require_once(LIB_PATH.DS.'error_logs.php');
+
+// bring in access tokens 
+require_once(LIB_PATH.DS.'access_tokens.php');
+
+// bring in auth 
+require_once(LIB_PATH.DS.'auth.php');

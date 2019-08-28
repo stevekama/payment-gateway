@@ -1,6 +1,5 @@
 <?php require_once('../models/initialization.php'); 
-require_once('layouts/header.php'); ?>
-    
+require_once('layouts/systems/header.php'); ?>
   <!-- Content Header (Page header) -->
   <section class="content-header">
     <h1>
@@ -155,4 +154,4 @@ require_once('layouts/header.php'); ?>
     <!-- /.row -->
   </section>
   <!-- /.content -->
-<?php require_once('layouts/footer.php'); ?>
+<?php require_once('layouts/systems/footer.php'); ?>
