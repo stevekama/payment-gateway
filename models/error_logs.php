@@ -30,8 +30,8 @@ class ErrorLogs{
        $this->description = htmlentities($this->description);
        
        //Bind Data
-       $stmt->bindParam(':transaction_type', $this->errors);
-       $stmt->bindParam(':transaction_id', $this->description);
+       $stmt->bindParam(':errors', $this->errors);
+       $stmt->bindParam(':description', $this->description);
 
        //Execute query 
        if($stmt->execute()){

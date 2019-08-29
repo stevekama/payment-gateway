@@ -71,7 +71,7 @@ class MPESATransactions{
        }
        //print error 
        $error = new ErrorLogs();
-       $error->errors = $stmt->error;
+       $error->errors = 'Error';
        $error->description = $stmt->error;
        if($error->create()){
             return false;

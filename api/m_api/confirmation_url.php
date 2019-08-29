@@ -32,6 +32,8 @@ $transaction->first_name = $jsonMpesaResponse['FirstName'];
 $transaction->middle_name = $jsonMpesaResponse['MiddleName'];
 $transaction->last_name = $jsonMpesaResponse['LastName'];
 
+echo $response;
+
 if($transaction->create()){
 	echo json_encode(
 		array('message'=>'success')

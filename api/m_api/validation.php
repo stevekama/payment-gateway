@@ -1,6 +1,8 @@
 <?php 
-
+header('Access-Control-Allow-Origin: *');
 header('Content-Type: application/json');
+
+include_once '../../models/initialization.php';
 
 $response = '{
 				"ResultCode": 0, 
@@ -24,6 +26,8 @@ $transaction->transaction_amount = $jsonMpesaResponse['TransAmount'];
 $transaction->transaction_currency = 'KSH';
 $transaction->transaction_method = 'MPESA';
 $transaction->transaction_status = 'COMPLETE';
+
+echo $response;
 
 if($transaction->create()){
 	echo json_encode(
