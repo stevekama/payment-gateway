@@ -21,9 +21,6 @@ require_once(LIB_PATH.DS.'users.php');
 // bring in php mailer 
 require_once(MAIL_PATH.DS.'autoload.php');
 
-// bring in mpesa transactions 
-require_once(LIB_PATH.DS.'mpesa_transactions.php');
-
 // bring in error logs 
 require_once(LIB_PATH.DS.'error_logs.php');
 
@@ -35,3 +32,9 @@ require_once(LIB_PATH.DS.'access_tokens.php');
 
 // bring in mpesa apps 
 require_once(LIB_PATH.DS.'mpesa_apps.php');
+
+// bring in mpesa transactions 
+require_once(LIB_PATH.DS.'mpesa_transactions.php');
+
+// bring in transactions 
+require_once(LIB_PATH.DS.'transactions.php');

@@ -28,7 +28,7 @@ class MPESATransactions{
         $this->conn = $database->connect();
     }
 
-    public function create_transaction()
+    public function create()
     {
        $query = 'INSERT INTO '.$this->table_name.'(transaction_type, transaction_id, transaction_time, transaction_amount, business_shortcode, bill_refnumber, invoice_number, original_balance, third_party_transaction_id, msisdn, first_name, middle_name, last_name)VALUES(:transaction_type, :transaction_id, :transaction_time, :transaction_amount, :business_shortcode, :bill_refnumber, :invoice_number, :original_balance, :third_party_transaction_id, :msisdn, :first_name, :middle_name, :last_name )';  
 
