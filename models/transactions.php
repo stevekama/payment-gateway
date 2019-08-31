@@ -60,4 +60,17 @@ class Transactions{
        }
     }
 
+    public function find_all(Type $var = null)
+    {
+        $query = "SELECT * FROM ".$this->table_name." ORDER BY id DESC";
+        
+        // Prepare statement
+        $stmt = $this->conn->prepare($query);
+
+        // Execute query
+        $stmt->execute();
+
+        return $stmt;
+    }
+
 }

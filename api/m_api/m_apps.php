@@ -17,7 +17,6 @@ $auth = new Auth($key, $secret);
 
 $headers = ['Content-Type: application/json; charset=utf8'];
 
-
 $access_token_url = 'https://sandbox.safaricom.co.ke/oauth/v1/generate?grant_type=client_credentials';
 
 $access_token = $auth->Access_Token($headers, $access_token_url);
@@ -35,6 +34,7 @@ $validationUrl = base_url().'api/mp_api/validation.php'; // path to your validat
 $curl = curl_init();
 curl_setopt($curl, CURLOPT_URL, $register_url);
 curl_setopt($curl, CURLOPT_HTTPHEADER, array('Content-Type:application/json','Authorization:Bearer '.$access_token)); //setting custom header
+
 $curl_post_data = array(
   //Fill in the request parameters with valid values
   'ShortCode' => $shortCode,
@@ -42,6 +42,7 @@ $curl_post_data = array(
   'ConfirmationURL' => $confirmationUrl,
   'ValidationURL' => $validationUrl
 );
+
 $data_string = json_encode($curl_post_data);
 curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($curl, CURLOPT_POST, true);
