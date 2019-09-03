@@ -30,6 +30,9 @@ require_once(LIB_PATH.DS.'auth.php');
 // bring in access tokens 
 require_once(LIB_PATH.DS.'access_tokens.php');
 
+//bring in apps
+require_once(LIB_PATH.DS.'apps.php');
+
 // bring in mpesa apps 
 require_once(LIB_PATH.DS.'mpesa_apps.php');
 

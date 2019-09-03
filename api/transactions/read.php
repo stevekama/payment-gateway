@@ -16,12 +16,12 @@ $num = $results->rowCount();
 if($num > 0){
      // Transactions array
     $transactions_arr = array();
-
+    $transactions_arr['data'] = array();
     while($result = $results->fetch(PDO::FETCH_ASSOC)){
         extract($result);
 
         $transactions_item = array(
-            'id' => $id,
+            'id'                   => $id,
             'transaction_id'       => $transaction_id,
             'product'              => $product,
             'transaction_amount'   => $transaction_amount,
@@ -38,7 +38,5 @@ if($num > 0){
     echo json_encode($transactions_arr);
 }else{
     // No Posts
-    echo json_encode(
-        array('message' => 'No Transactions Found')
-    );
+    echo json_encode(array('message' => 'No Transactions Found'));
 }
