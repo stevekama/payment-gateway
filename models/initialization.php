@@ -34,6 +34,9 @@ require_once(LIB_PATH.DS.'access_tokens.php');
 require_once(LIB_PATH.DS.'apps.php');
 
 // bring in mpesa apps 
+require_once(LIB_PATH.DS.'mpesa_apps_details.php');
+
+// bring in mpesa apps 
 require_once(LIB_PATH.DS.'mpesa_apps.php');
 
 // bring in mpesa transactions 
