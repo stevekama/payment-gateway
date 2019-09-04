@@ -35,9 +35,7 @@ $transaction->last_name = $jsonMpesaResponse['LastName'];
 echo $response;
 
 if($transaction->create()){
-	echo json_encode(
-		array('message'=>'success')
-	);
+	echo json_encode(array('message'=>'success'));
 }else{
 	echo json_encode(
 		array('message'=>'not success')

@@ -13,6 +13,7 @@ class MPESA_APPS_Details{
     public $validation;
     public $lipanampesacode;
     public $passkey;
+    public $callback_url;
     public $timestamp;
     
     //connect to db 
@@ -24,7 +25,7 @@ class MPESA_APPS_Details{
 
     public function create()
     {
-       $query = 'INSERT INTO '.$this->table_name.'(app_token, shortcode, confirmation, validation, lipanampesacode, passkey, timestamp)VALUES(:app_token, :shortcode, :confirmation, :validation, :lipanampesacode, :passkey, :timestamp)';  
+       $query = 'INSERT INTO '.$this->table_name.'(app_token, shortcode, confirmation, validation, lipanampesacode, passkey, callback_url, timestamp)VALUES(:app_token, :shortcode, :confirmation, :validation, :lipanampesacode, :passkey, :callback_url, :timestamp)';  
 
        //Prepare statement
        $stmt = $this->conn->prepare($query);
@@ -36,9 +37,9 @@ class MPESA_APPS_Details{
        $this->validation = htmlentities($this->validation);
        $this->lipanampesacode = htmlentities($this->lipanampesacode);
        $this->passkey = htmlentities($this->passkey);
+       $this->callback_url = htmlentities($this->callback_url);
        $this->timestamp = htmlentities($this->timestamp);
        
-
        //Bind Data
        $stmt->bindParam(':app_token', $this->app_token);
        $stmt->bindParam(':shortcode', $this->shortcode);
@@ -46,6 +47,7 @@ class MPESA_APPS_Details{
        $stmt->bindParam(':validation', $this->validation);
        $stmt->bindParam(':lipanampesacode', $this->lipanampesacode);
        $stmt->bindParam(':passkey', $this->passkey);
+       $stmt->bindParam(':callback_url', $this->callback_url);
        $stmt->bindParam(':timestamp', $this->timestamp);
 
        //Execute query 
@@ -60,5 +62,4 @@ class MPESA_APPS_Details{
             return false;
        }
     }
-
 }
