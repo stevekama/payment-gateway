@@ -62,4 +62,23 @@ class MPESA_APPS_Details{
             return false;
        }
     }
+
+    public function find_by_token($token)
+    {
+        $query = "SELECT * FROM ".$this->table_name." WHERE app_token = :app_token LIMIT 1";
+
+        $stmt = $this->conn->prepare($query);
+
+        $stmt->execute(array('app_token'=>$token));
+
+        $count = $stmt->rowCount();
+
+        if($count > 0){
+            $app = $stmt->fetch(PDO::FETCH_ASSOC);
+            return $app;
+        }else{
+            return false;
+        }
+
+    }
 }

@@ -36,10 +36,23 @@ $access_token = $auth->Access_Token($headers, $access_token_url);// generate acc
 //Simulate Payments
 $simulate_url = 'https://sandbox.safaricom.co.ke/mpesa/c2b/v1/simulate';
 
-$ShortCode  = $current_app['shortcode']; // Shortcode. Same as the one on register_url.php
+// initialize mpesa details 
+$details = new MPESA_APPS_Details();
+
+// get mpesa details 
+$mpesa_details = $details->find_by_token($current_app['app_token']);
+
+//check if details are found 
+if(!$mpesa_details){
+    echo json_encode(array('message'=>'errorToken'));
+    die();
+}
+
+$ShortCode  = $mpesa_details['shortcode']; // Shortcode. Same as the one on register_url.php
 $amount     = $_POST['amount']; // amount the client/we are paying to the paybill
 $msisdn     = $_POST['number']; // phone number paying 
 $billRef    = $_POST['invoice']; // This is anything that helps identify the specific transaction. Can be a clients ID, Account Number, Invoice amount, cart no.. etc
+
 $curl = curl_init();
 curl_setopt($curl, CURLOPT_URL, $simulate_url);
 curl_setopt($curl, CURLOPT_HTTPHEADER, array('Content-Type:application/json','Authorization:Bearer '.$access_token));
@@ -50,6 +63,7 @@ $curl_post_data = array(
     'Msisdn' => $msisdn,
     'BillRefNumber' => $billRef
 );
+
 $data_string = json_encode($curl_post_data);
 curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($curl, CURLOPT_POST, true);
