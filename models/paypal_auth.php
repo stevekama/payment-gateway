@@ -13,7 +13,7 @@ class PayPalAuth{
        $this->app_key = $key;
        $this->app_secret = $secret;
     }
-
+    
     public function auth()
     {
         $paypal = new \PayPal\Rest\ApiContext(
