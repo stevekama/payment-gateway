@@ -17,5 +17,16 @@ use \PayPal\Api\Payment;
 include_once '../../models/initialization.php';
 
 // authenticate user 
+// get key and secret 
+$app = new Apps();
 
-// process payments 
+// get app details 
+$current_app = $app->find_by_token($_POST['token']);
+
+// Paypal Auth 
+$paypal_auth = new PayPalAuth($current_app['key'], $current_app['secret']);
+
+// get paypal details 
+$paypal = $paypal_auth->auth();
+
+// process payments
