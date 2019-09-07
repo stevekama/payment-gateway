@@ -36,10 +36,10 @@
                     </span>
                 </a>
                 <ul class="treeview-menu">
-                    <li class="active"><a href="<?php echo base_url(); ?>public/index.php"><i class="fa fa-circle-o"></i> Dashboard</a></li>
+                    <li class="active"><a href="<?php echo base_url(); ?>public/index.php"><i class="fa fa-circle-o"></i> Home</a></li>
                 </ul>
             </li>
-            <li class="treeview">
+         <!--   <li class="treeview">
                 <a href="#">
                     <i class="fa fa-files-o"></i>
                     <span>Layout Options</span>
@@ -53,7 +53,7 @@
                     <li><a href="pages/layout/fixed.html"><i class="fa fa-circle-o"></i> Fixed</a></li>
                     <li><a href="pages/layout/collapsed-sidebar.html"><i class="fa fa-circle-o"></i> Collapsed Sidebar</a></li>
                 </ul>
-            </li> 
+            </li> --->
             <li class="treeview">
                 <a href="#">
                     <i class="fa fa-edit"></i> <span>Forms</span>
