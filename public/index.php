@@ -69,12 +69,12 @@ require_once('layouts/systems/header.php'); ?>
         <!-- TABLE: LATEST ORDERS -->
         <div class="box box-info">
           <div class="box-header with-border">
-            <h3 class="box-title">Transactions</h3>
+            <h3 class="box-title">Applications</h3>
           </div>
           <!-- /.box-header -->
           <div class="box-body">
             <div class="table-responsive">
-              <table class="table no-margin">
+              <!-- <table class="table no-margin">
                 <thead>
                   <tr>
                     <th>Order ID</th>
@@ -141,9 +141,33 @@ require_once('layouts/systems/header.php'); ?>
                     </td>
                   </tr>
                 </tbody>
-              </table>
+              </table>   --->
+                <table class="table table-hover table-bordered">
+                    <thead>
+                    <td>ID</td>
+                    <td>App Name</td>
+                    <td>Payment Method</td>
+                    <td>App Key</td>
+                    <td>Secret</td>
+                    </thead>
+                </table>
             </div>
-            <!-- /.table-responsive -->
+              <div class="box box-info">
+                  <div class="box-header with-border">
+                      <h3 class="box-title">Transactions</h3>
+                  </div>
+                  <div class="table-responsive">
+                      <table class="table table-hover table-bordered">
+                          <thead>
+                          <td>ID</td>
+                          <td>Transaction type</td>
+                          <td>Payment Method</td>
+                          <td>Time</td>
+                          <td>Date</td>
+                          </thead>
+                      </table>
+                  </div>
+                  <!-- /.table-responsive -->
           </div>
           <!-- /.box-body -->
         </div>

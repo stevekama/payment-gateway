@@ -36,10 +36,10 @@
                     </span>
                 </a>
                 <ul class="treeview-menu">
-                    <li class="active"><a href="<?php echo base_url(); ?>public/index.php"><i class="fa fa-circle-o"></i> Dashboard</a></li>
+                    <li class="active"><a href="<?php echo base_url(); ?>public/index.php"><i class="fa fa-circle-o"></i> Home</a></li>
                 </ul>
             </li>
-            <li class="treeview">
+         <!--   <li class="treeview">
                 <a href="#">
                     <i class="fa fa-files-o"></i>
                     <span>Layout Options</span>
@@ -53,37 +53,21 @@
                     <li><a href="pages/layout/fixed.html"><i class="fa fa-circle-o"></i> Fixed</a></li>
                     <li><a href="pages/layout/collapsed-sidebar.html"><i class="fa fa-circle-o"></i> Collapsed Sidebar</a></li>
                 </ul>
-            </li> 
+            </li> --->
             <li class="treeview">
                 <a href="#">
-                    <i class="fa fa-edit"></i> <span>Forms</span>
+                    <i class="fa fa-edit"></i> <span>Apps</span>
                     <span class="pull-right-container">
                         <i class="fa fa-angle-left pull-right"></i>
                     </span>
                 </a>
                 <ul class="treeview-menu">
-                    <li><a href="pages/forms/general.html"><i class="fa fa-circle-o"></i> General Elements</a></li>
-                    <li><a href="pages/forms/advanced.html"><i class="fa fa-circle-o"></i> Advanced Elements</a></li>
-                    <li><a href="pages/forms/editors.html"><i class="fa fa-circle-o"></i> Editors</a></li>
+                    <li><a href="<?php echo base_url(); ?>public/apps.php"><i class="fa fa-circle-o"></i> Manage your Applications</a></li>
+                    <li><a href="<?php echo base_url(); ?>public/addApps.php"><i class="fa fa-circle-o"></i> Add new apps</a></li>
+                    
                 </ul>
             </li>
-            <li class="treeview">
-                <a href="#">
-                    <i class="fa fa-table"></i> 
-                    <span>Tables</span>
-                    <span class="pull-right-container">
-                        <i class="fa fa-angle-left pull-right"></i>
-                    </span>
-                </a>
-                <ul class="treeview-menu">
-                    <li>
-                        <a href="pages/tables/simple.html">
-                            <i class="fa fa-circle-o"></i> Simple tables
-                        </a>
-                    </li>
-                    <li><a href="pages/tables/data.html"><i class="fa fa-circle-o"></i> Data tables</a></li>
-                </ul>
-            </li>
+
         </ul>
     </section>
     <!-- /.sidebar -->
