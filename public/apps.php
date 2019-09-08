@@ -30,7 +30,7 @@
                     <textarea class="form-control" id="AccessToken" placeholder="App Key"></textarea><br>
                 </div>
                 <div class="modal-footer">
-                    <input type="button" value="save" onclick="manageData('addNew')" class="btn btn-success">
+                    <input type="button" value="save" onclick="manageData('addNew')" class="btn btn-primary">
                 </div>
             </div>
         </div>
@@ -38,7 +38,7 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <h2> Application Table manager</h2>
-            <input style="float: right" type="button" class="btn btn-success" id="addNew" value="Add New">
+            <input style="float: right" type="button" class="btn btn-primary" id="addNew" value="Add New">
             <br><br>
             <table class="table table-hover table-bordered">
                 <thead>
