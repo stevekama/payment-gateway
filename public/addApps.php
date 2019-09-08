@@ -9,8 +9,20 @@ require_once('layouts/systems/header.php'); ?>
         </div>
         <div class="form-group">
             <label>Payment Method</label>
-            <input type="text" class="form-control" id="method" placeholder="Mpesa/Papal">
+            
         </div>
+        <div class="form-group">
+            <select class="custom-select" id="inputGroupSelect02">
+                <option selected>Choose...</option>
+                <option value="1">Mpesa</option>
+                <option value="2">Paypal</option>
+
+            </select>
+            <div class="input-group-append">
+                <label class="input-group-text" for="inputGroupSelect02">Options</label>
+            </div>
+        </div>
+
         <div class="form-group">
             <label>Key</label>
             <input type="text" class="form-control" id="key" placeholder="key">
