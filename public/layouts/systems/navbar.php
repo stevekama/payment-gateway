@@ -63,6 +63,7 @@
                 </a>
                 <ul class="treeview-menu">
                     <li><a href="<?php echo base_url(); ?>public/apps.php"><i class="fa fa-circle-o"></i> Manage your Applications</a></li>
+                    <li><a href="<?php echo base_url(); ?>public/addApps.php"><i class="fa fa-circle-o"></i> Add new apps</a></li>
                     
                 </ul>
             </li>

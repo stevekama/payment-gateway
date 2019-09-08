@@ -148,7 +148,7 @@ require_once('layouts/systems/header.php'); ?>
                     <td>App Name</td>
                     <td>Payment Method</td>
                     <td>App Key</td>
-                    <td>Access Token</td>
+                    <td>Secret</td>
                     </thead>
                 </table>
             </div>
