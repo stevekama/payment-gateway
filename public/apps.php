@@ -25,6 +25,7 @@
 
             <a href="<?php echo base_url(); ?>public/addApps.php" class="btn btn-primary" role="button" aria-disabled="true">Add New</a>
 
+
             <br><br>
             <table class="table table-hover table-bordered">
                 <thead>
