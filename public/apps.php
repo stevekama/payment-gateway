@@ -27,6 +27,7 @@
                     <input type="text" class="form-control" placeholder="App Name" id="AppName"><br>
                     <textarea class="form-control" id="PaymentMethod" placeholder="Mpesa/Paypal"></textarea><br>
                     <textarea class="form-control" id="AccessToken" placeholder="Access Token"></textarea><br>
+                    <textarea class="form-control" id="AccessToken" placeholder="App Key"></textarea><br>
                 </div>
                 <div class="modal-footer">
                     <input type="button" value="save" onclick="manageData('addNew')" class="btn btn-success">
@@ -44,6 +45,7 @@
                 <td>ID</td>
                 <td>App Name</td>
                 <td>Payment Method</td>
+                <td>App Key</td>
                 <td>Access Token</td>
                 </thead>
             </table>
